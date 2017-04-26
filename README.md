@@ -4,7 +4,7 @@
 Simplistic sample Web Part that demonstrates the use of RiotJS in creating a SharePoint Framework web part. The properties pane for this web part display a drop down list of lists in the current web. Once the user selects one of the lists, the web part display the contents of the list.
 
 
-![Screeshot of the Display List web part](./assets/display-list-preview.png).
+![Screeshot of the Display List web part](./assets/riot-list-preview.gif).
 
 > Does only show data when hosted in SharePoint. No mock data at this point for local testing the rendering.
 
