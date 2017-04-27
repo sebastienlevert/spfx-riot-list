@@ -35,6 +35,7 @@ export class ListViewer extends Riot.Element {
     if(this.listId) {
       this.isLoading = true;
       this.update();
+      
       this.list = await pnp.sp.web.lists.getById(this.listId).getAs(ODataEntity(ListObject));
       this.items = await pnp.sp.web.lists.getById(this.listId).items.getAs(ODataEntityArray(ItemObject));
       this.isLoading = false;
