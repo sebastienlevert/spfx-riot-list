@@ -12,7 +12,7 @@ export class ListViewer extends Riot.Element {
   private listTitle: string;
   private items: ItemObject[] = new Array<ItemObject>();
   private list: ListObject;
-  private isLoading: boolean = true;
+  private isLoading: boolean = false;
 
   constructor(options: IListViewerProps) {
     super();
@@ -33,6 +33,8 @@ export class ListViewer extends Riot.Element {
 
   protected async init() {
     if(this.listId) {
+      this.isLoading = true;
+      this.update();
       this.list = await pnp.sp.web.lists.getById(this.listId).getAs(ODataEntity(ListObject));
       this.items = await pnp.sp.web.lists.getById(this.listId).items.getAs(ODataEntityArray(ItemObject));
       this.isLoading = false;
