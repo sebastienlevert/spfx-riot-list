@@ -12,15 +12,15 @@
         <div class="ms-Grid-col ms-u-hiddenSm ms-u-md3">
         </div>
       </div>
-		  <div class="Placeholder-description ms-Grid-row" if="{ list }">
+		  <div class="Placeholder-description ms-Grid-row" if="{ listId }">
 			  <span class="Placeholder-descriptionText">{ list.Title }</span>
 		  </div>
-		  <div class="Placeholder-description ms-Grid-row" if="{ !list }">
+		  <div class="Placeholder-description ms-Grid-row" if="{ !listId }">
 			  <span class="Placeholder-descriptionText">Please configure your webpart to select a list</span>
 		  </div>
     </div>
   </div>
 
-  <office-ui-fabric-table is-loading="{ isLoading }" items="{ items }" styles="{ styles }" if="{ list }"></office-ui-fabric-table>
+  <office-ui-fabric-table is-loading="{ isLoading }" items="{ items }" styles="{ styles }" if="{ listId }"></office-ui-fabric-table>
 
 </list-viewer>
